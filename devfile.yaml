@@ -5,7 +5,7 @@ projects:
   - name: quasar-todo-openapi
     source:
       type: git
-      location: 'https://github.com/github.com:redhat-appdev-practice/quasar-todo-openapi.git'
+      location: 'https://github.com/redhat-appdev-practice/quasar-todo-openapi.git'
 components:
   - type: chePlugin
     id: vscode/typescript-language-features/latest
