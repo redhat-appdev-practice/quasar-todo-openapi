@@ -25,6 +25,7 @@ workshop.
 3. Click "Create Workspace"
 4. Click "Custom Workspace" tab
 5. Paste this URL for our DevFile and click "Load Devfile" ![DevFile Screenshot](docs/Step_02_DevSpaces.png)
+   * `https://raw.githubusercontent.com/redhat-appdev-practice/quasar-todo-openapi/main/devfile.yaml`
 6. Scroll to the bottom of the page and click "Create & Open"
 7. After a short time provisioning, the cloud-based development environment will open with our starting code loaded.
    * You may notice that the user interface is very much like Visual Studio Code or Atom editors
