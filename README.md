@@ -28,6 +28,8 @@ workshop.
 6. Scroll to the bottom of the page and click "Create & Open"
 7. After a short time provisioning, the cloud-based development environment will open with our starting code loaded.
    * You may notice that the user interface is very much like Visual Studio Code or Atom editors
+8. Click "Yes, I trust" when prompted if you trust the authors of the code being loaded ![Trust Code](docs/Step_03_DevSpaces.png)
+9. You should now see the project loaded in your DevSpace ![Cloud IDE](docs/Step_04_DevSpaces.png)
 
 ## Install the dependencies
 ```bash
