@@ -1,0 +1,29 @@
+openapi: '3.0.1'
+info:
+  description: Todo List App API
+  title: Todo OpenAPI Application
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      operationId: getHealthStatus
+      responses:
+        200:
+          description: Health Check OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          x-faker: hacker.phrase
+        code:
+          type: number
+          multipleOf: 1
+          minimum: 200
+          maximum: 599
