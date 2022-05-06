@@ -10,6 +10,7 @@
     "test": "echo \"No test specified\" && exit 0",
     "serve": "yarn; quasar dev",
     "watch": "npm-watch",
+    "build": "quasar build",
     "prism": "prism mock -d --cors -p 7080 openapi.yml",
     "openapi": "openapi-generator-cli generate -g typescript-axios -i openapi.yml -o src/sdk/ -p withSeparateModelsAndApi=true,apiPackage=api,modelPackage=models,legacyDiscriminatorBehavior=false"
   },
