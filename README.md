@@ -1,6 +1,26 @@
 # Quasar Todo OpenAPI (quasar-todo-openapi)
 
-A Cloud-Native, Contract-First Application
+A Cloud-Native, Contract-First Application Using Design Thinking
+
+## Overview
+
+During this workshop, we will be building a relatively simple Todo List application, but we will be doing it perhaps
+differently than you might be used to. We're going to start from a validated user experience (e.g. A Figma Prototype),
+implement a mock user interface using Contract-First API tooling (e.g. OpenAPI & Prism), and only **AFTER** we
+are sure that our stakeholders are satisfied with our UX do we implement the API server.
+
+The workshop is aimed at using
+[Quasar Framework](https://quasar.dev) with [VueJS](https://vuejs.org), but the concepts work equally well with any
+UI toolkit or framework. You are welcome to try with Svelte, React, or Angular as well if they are more familiar to you.
+
+You are welcome to use whichever IDE or editor you are comfortable with during the workshop. I have included "hints" in
+this repository to install helpful plugins for [VSCode](https://code.visualstudio.com/) and you may also see the
+presenter use [WebStorm](https://www.jetbrains.com/webstorm/) or [OpenShift DevSpaces](https://developers.redhat.com/products/codeready-workspaces/overview)
+
+## Our Validated Design
+
+You can view our "prototype" in Figma [HERE](https://www.figma.com/proto/FKGtcMU6lfafc3oKzAJNQM/Todo?node-id=5%3A1091&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=5%3A1091)
+or as a PDF [HERE](docs/Todo_Design.pdf)
 
 ## Use The Red Hat Developer Sandbox And DevSpaces (OPTIONAL)
 
