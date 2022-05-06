@@ -3,10 +3,20 @@ info:
   description: Todo List App API
   title: Todo OpenAPI Application
   version: 1.0.0
+tags:
+  - name: all
+    description: All operations in the entire application
+  - name: todo
+    description: API operations for manipulating Todo items
+  - name: system
+    description: API operations for operating the service
 paths:
   /health:
     get:
       operationId: getHealthStatus
+      tags:
+        - all
+        - system
       responses:
         200:
           description: Health Check OK
@@ -14,8 +24,36 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /user:
+    get:
+      operationId: getCurrentUser
+      tags:
+        - all
+        - system
+      responses:
+        200:
+          description: Return user profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
 components:
   schemas:
+    User:
+      type: object
+      properties:
+        avatar:
+          type: string
+          x-faker:
+            image.people:
+              - 128
+              - 128
+              - 'true'
+            # Returns something like http://placeimg.com/128/128/people
+        name:
+          type: string
+          x-faker: name.findName
+          # Returns something like 'Lisa Armstrong' or "Michael Evens II'
     Error:
       type: object
       properties:
