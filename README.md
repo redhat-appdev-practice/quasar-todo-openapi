@@ -3,6 +3,7 @@
 A Cloud-Native, Contract-First Application Using Design Thinking
 
 ## Overview
+![QR Code Image](docs/QR_Code.png)
 
 During this workshop, we will be building a relatively simple Todo List application, but we will be doing it perhaps
 differently than you might be used to. We're going to start from a validated user experience (e.g. A Figma Prototype),
