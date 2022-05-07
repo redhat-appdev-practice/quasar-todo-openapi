@@ -77,13 +77,13 @@ to act as an NPM Proxy/Cache
 From your command-line, run the following commands:
 
 ```bash
-npm config set registry http://192.168.1.97:8081/repository/npmjs/
+npm config set registry http://172.18.12.1:8081/repository/npmjs/
 npm config set always-auth true
-npm login --registry=http://192.168.1.97:8081/repository/npmjs/
-# Username: admin
-# Password: npmpassword
+npm login --registry=http://172.18.12.1:8081/repository/npmjs/
+# Username: devoxx
+# Password: devoxx
 # Email: (this IS public) anything@anydomain.com
-yarn config set registry http://192.168.1.97:8081/repository/npmjs/
+yarn config set registry http://172.18.12.1:8081/repository/npmjs/
 ```
 
 ### Customize the configuration
