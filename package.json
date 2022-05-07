@@ -39,6 +39,7 @@
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1",
     "@quasar/app-webpack": "^3.0.0",
     "@stoplight/prism-cli": "^4.9.2",
     "@types/node": "^12.20.21",
