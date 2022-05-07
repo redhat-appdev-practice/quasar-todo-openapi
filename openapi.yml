@@ -24,6 +24,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /todos:
+    get:
+      description: Get all todos
+      operationId: getAllTodos    # (2)
+      tags:
+        - all
+        - todo
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
   /user:
     get:
       operationId: getCurrentUser
@@ -39,6 +55,26 @@ paths:
                 $ref: '#/components/schemas/User'
 components:
   schemas:
+    NewTodo:
+      type: object
+      required:
+        - title
+      properties:
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+        id:
+          type: string
+          format: uuid
+    Todo:
+      type: object
+      required:
+        - title
+        - id
+      allOf:
+        - $ref: '#/components/schemas/NewTodo'
     User:
       type: object
       properties:
