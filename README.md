@@ -23,6 +23,15 @@ presenter use [WebStorm](https://www.jetbrains.com/webstorm/) or [OpenShift DevS
 You can view our "prototype" in Figma [HERE](https://www.figma.com/proto/FKGtcMU6lfafc3oKzAJNQM/Todo?node-id=5%3A1091&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=5%3A1091)
 or as a PDF [HERE](docs/Todo_Design.pdf)
 
+## Required Tools & Dependencies
+
+1. NodeJS >= 16
+2. Yarn
+3. Java >= 8 (11 preferred)
+4. The ability to run services on ports 8080 and 7080 locally
+
+If you cannot install software or do not have many resources on your device you can use the Dev Sandbox option below
+
 ## Use The Red Hat Developer Sandbox And DevSpaces (OPTIONAL)
 
 Red Hat provides a small OpenShiftⓇ Kubernetes environment for free to developers. In this **Developer Sandbox** you
