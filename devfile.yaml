@@ -4,48 +4,50 @@ metadata:
 projects:
   - name: quasar-todo-openapi
     source:
-      type: git
       location: 'https://github.com/redhat-appdev-practice/quasar-todo-openapi.git'
+      type: git
 components:
-  - type: chePlugin
-    id: vscode/typescript-language-features/latest
+  - id: vscode/typescript-language-features/latest
+    type: chePlugin
     registryUrl: 'https://eclipse-che.github.io/che-plugin-registry/7.42.0/v3/'
-  - type: dockerimage
-    alias: nodejs
-    image: 'quay.io/josphill/che-nodejs16-openapi:latest'
-    memoryLimit: 1500Mi
+  - mountSources: true
     endpoints:
-      - name: nodejs
-        port: 3000
-    mountSources: true
+      - name: quasar
+        port: 8080
+      - name: prism
+        port: 7080
+    memoryLimit: 1500Mi
+    type: dockerimage
+    alias: quasar
+    image: 'quay.io/josphill/che-nodejs16-openapi:latest'
 commands:
   - name: 1. Install Yarn 2
     actions:
-      - type: exec
-        component: nodejs
+      - workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        type: exec
         command: yarn set version berry
-        workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        component: quasar
   - name: 2. Install all required dependencies
     actions:
-      - type: exec
-        component: nodejs
+      - workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        type: exec
         command: yarn install
-        workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        component: quasar
   - name: 3. Build the app
     actions:
-      - type: exec
-        component: nodejs
+      - workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        type: exec
         command: yarn build
-        workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        component: quasar
   - name: 4. Run the app
     actions:
-      - type: exec
-        component: nodejs
+      - workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        type: exec
         command: yarn watch
-        workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        component: quasar
   - name: 5. Launch tests
     actions:
-      - type: exec
-        component: nodejs
+      - workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        type: exec
         command: yarn test
-        workdir: '${CHE_PROJECTS_ROOT}/quasar-todo-openapi'
+        component: quasar
